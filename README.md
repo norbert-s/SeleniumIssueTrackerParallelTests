@@ -1,13 +1,15 @@
 # Testing issue tracker by running Selenium tests - E2E tests
 
-Fully working one
 
-One of the projects one need to finish in order to get the back end certificate on freecodecamp.org is to develop an issue tracker.
-the online version is here : https://issue-tracker-ns.herokuapp.com/
 
-the github version can be found here : https://github.com/norbert-s/issuetracker
+Freecodecamp project of issuetracker is tested here with Java Selenium
 
-Part of the projects is to unit, functional, integration test the project which is done on the back end.
+Here parallel testing is solved, however it is not the final version, because webdiriver are called in the functions, instead of having by injecting the new webdriver objects. 
+Based on the book written by Mark Collin(Mastering selenium webdriver 3.0) the final version is refactored and the webdriver objects are correctly taken from a threadpool of webdrivers.
+Here the tests work, although still not in line with OOP and Solid desing principles.
 
-This project was created to be do the E2" test of the app
+
+
+The project tested here is available at: https://issue-tracker-mongo.herokuapp.com/
+
 
