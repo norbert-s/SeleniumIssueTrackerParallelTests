@@ -1,22 +1,17 @@
-# SeleniumIssueTracker_20200321
+# Testing issue tracker by running Selenium tests - E2E tests
 
-Fully working one
 
-One of the projects one need to finish in order to get the back end certificate on freecodecamp.org is to develop an issue tracker.
-the online version is here : https://issue-tracker-ns.herokuapp.com/
 
-the github version can be found here : https://github.com/norbert-s/issuetracker
+Freecodecamp project of issuetracker is tested here with Java Selenium
 
-Part of the projects is to unit, functional, integration test the project which happens from the back end.
-But as part of a personal project I documented the testing of the UI of the issue tracker (with testrail) and 
-tested the UI fully (focusing on testing the functionality and not being concerned with what the font size was or how the tracker looked  like on a Samsung Galaxy S10,or the like). 
-This project was to test the UI with selenium using Utility class, Page Object Model, Page Factory, properties -Data-driven, Key driven testing and Model based testing overall in Java. 
+Here parallel testing is solved, however it is not the final version, because webdiriver are called in the functions, instead of having by injecting the new webdriver objects. 
 
-The first phase of the testing process was to lay out what was needed to be tested, which happened using testrail.
-Then I moved on to write the tests exactly as I layed it out in the test plan.
-Then tested the UI features of the issue tracker notably : 1. creation of new issues 2. update of issues 3. deletion of issues 4. querying the database.
-This is the first phase.
-In the second phase I am going to add:
-1. a TestNG runner, or several testNG runners still.
-2. in depth reporting and screenshots of failures, probably also screenshots of successfull tests in order to be able to take those screenshots and attach them as proof to testrail test cases and runs.
-3. Jenkins
+Based on the book written by Mark Collin(Mastering selenium webdriver 3.0) the final version is refactored and the webdriver objects are correctly taken from a threadpool of webdrivers.
+
+Here the tests work, although still not in line with OOP and Solid desing principles.
+
+
+
+The project tested here is available at: https://issue-tracker-mongo.herokuapp.com/
+
+
