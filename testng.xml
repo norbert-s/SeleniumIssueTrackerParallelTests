@@ -1,0 +1,82 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" parallel ="tests" thread-count="4">
+
+
+    <test name="Regression1">
+        <classes>
+            <!--<class name="SubmitIssueTest"/>
+            <class name="UpdateIssueTest"/>
+            <class name="DeleteIssueTest"/>
+            <class name="GetIssueTest"/>-->
+            <class name="UiTests"/>
+            <parameter name="browser" value="chrome" />
+        </classes>
+    </test>
+    <test name="Regression2">
+        <classes>
+
+            <class name="UiTests"/>
+            <parameter name="browser" value="chrome" />
+        </classes>
+    </test>
+    <test name="Regression3">
+        <classes>
+
+            <class name="UiTests"/>
+            <parameter name="browser" value="chrome" />
+        </classes>
+    </test>
+    <test name="Regression4">
+        <classes>
+
+            <class name="UiTests"/>
+            <parameter name="browser" value="chrome" />
+        </classes>
+    </test>
+<!--    <test name="Regression5">-->
+<!--        <classes>-->
+
+<!--            <class name="UiTests"/>-->
+<!--            <parameter name="browser" value="firefox" />-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Regression6">-->
+<!--        <classes>-->
+
+<!--            <class name="UiTests"/>-->
+<!--            <parameter name="browser" value="firefox" />-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Regression7">-->
+<!--        <classes>-->
+
+<!--            <class name="UiTests"/>-->
+<!--            <parameter name="browser" value="chrome" />-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Regression8">-->
+<!--        <classes>-->
+
+<!--            <class name="UiTests"/>-->
+
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Regression9">-->
+<!--        <classes>-->
+
+<!--            <class name="UiTests"/>-->
+
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Regression10">-->
+<!--        <classes>-->
+
+<!--            <class name="UiTests"/>-->
+
+<!--        </classes>-->
+<!--    </test>-->
+
+
+
+</suite>

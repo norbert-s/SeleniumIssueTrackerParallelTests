@@ -1,5 +1,8 @@
 .idea
 *.xml
+!pom.xml
+!testng.xml
 \libraries
 *.txt
+*.iml
 
