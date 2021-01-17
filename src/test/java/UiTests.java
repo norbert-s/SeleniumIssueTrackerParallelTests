@@ -71,7 +71,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
     public void validValuesForTheAPI_C1(String browser) throws IOException {
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         s.titleSend("");
         s.getTitle().sendKeys(getValidTitle());
         s.getText().sendKeys(getValidText());
@@ -96,7 +96,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
     public void nonValidTitle_C2(String browser) throws IOException {
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         s.getTitle().sendKeys(getInvalidShortTitle());
         s.getSubmit().click();
         callWait(s.getJson(),d);
@@ -114,7 +114,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
     public void nothingIsEnteredToBested_C3(String browser) throws IOException {
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         s.getSubmit().click();
         callWait(s.getJson(),d);
         String jsonText = s.getJson().getText();
@@ -131,7 +131,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
     public void mandatoryFieldsAreEnteredExceptTitle_C4(String browser) throws IOException {
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         s.getText().sendKeys(getValidText());
         s.getCreatedBy().sendKeys(getValidCreatedBy());
         s.getSubmit().click();
@@ -149,7 +149,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
     public void titleIsProvidedButNoTextField_C5(String browser) throws IOException {
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         s.getTitle().sendKeys(getValidTitle());
         s.getSubmit().click();
         callWait(s.getJson(),d);
@@ -166,7 +166,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
     public void noTextIsEntered_C6(String browser) throws IOException {
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         s.getTitle().sendKeys(getValidTitle());
         s.getCreatedBy().sendKeys(getValidCreatedBy());
         s.getSubmit().click();
@@ -184,7 +184,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
     public void firstTwoButNotThird_C7(String browser) throws IOException {
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         s.getTitle().sendKeys(getValidTitle());
         s.getText().sendKeys(getValidText());
         s.getSubmit().click();
@@ -202,7 +202,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
     public void firstIsTwoChars_C9(String browser) throws IOException {
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         s.getTitle().sendKeys(getInvalidShortTitle());
         s.getText().sendKeys(getValidText());
         s.getCreatedBy().sendKeys(getValidCreatedBy());
@@ -221,7 +221,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
     public void secondIsTwoChars_C10(String browser) throws IOException {
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         s.getTitle().sendKeys(getValidTitle());
         s.getText().sendKeys(getInvalidShortText());
         s.getCreatedBy().sendKeys(getValidCreatedBy());
@@ -241,7 +241,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
     public void thirdIsTwoChars_C11(String browser) throws IOException {
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         s.getTitle().sendKeys(getValidTitle());
         s.getText().sendKeys(getValidText());
         s.getCreatedBy().sendKeys(getInvalidShortCreatedBy());
@@ -261,7 +261,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
         boolean success=false;
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         s.getTitle().sendKeys(getValidTitle());
         s.getText().sendKeys(getValidText());
         s.getCreatedBy().sendKeys(getValidCreatedBy());
@@ -281,7 +281,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
         boolean success = false;
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
 
         s.getTitle().sendKeys(getValidTitle());
         s.getText().sendKeys(getValidText());
@@ -303,7 +303,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
         boolean success = false;
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         String chars256 = getString(256);
         s.getTitle().sendKeys(chars256);
         s.getText().sendKeys(getValidText());
@@ -325,7 +325,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
         boolean success=false;
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
 
         String data = createData(3001);
         s.getTitle().sendKeys(getValidTitle());
@@ -346,7 +346,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
         boolean success=false;
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         String data = createData(3000);
         s.getTitle().sendKeys(getValidTitle());
         s.getText().sendKeys(data);
@@ -366,7 +366,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
         boolean success=false;
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         String chars256 = getString(255);
         s.getTitle().sendKeys(chars256);
         s.getText().sendKeys(getValidText());
@@ -391,7 +391,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
         boolean success=false;
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         String data = createData(256);
         s.getTitle().sendKeys(getValidTitle());
         s.getText().sendKeys(getValidText());
@@ -414,7 +414,7 @@ public class UiTests implements CreateFile, SubWord, CallWaitFor, Prop{
         boolean success=false;
         WebDriver d = setup(browser);
         SubmitIssue s = new SubmitIssue(d);
-        d.navigate().to("https://issue-tracker-ns.herokuapp.com/");
+        d.navigate().to("https://issue-tracker-mongo.herokuapp.com/");
         String data = createData(255);
         s.getTitle().sendKeys(getValidTitle());
         s.getText().sendKeys(getValidText());
